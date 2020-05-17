@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.NestedScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nested_content"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginTop="-35dp"
+    android:clipToPadding="false"
+    android:scrollbars="none"
+    android:scrollingCache="true"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context=".Controllers.RecipesDetailsActivity"
+    tools:showIn="@layout/activity_recipes_details">
+
+    <LinearLayout
+        android:id="@+id/details_Layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/spacing_large"
+        android:layout_marginRight="@dimen/spacing_large"
+        android:background="@android:color/white"
+        app:cardCornerRadius="4dp"
+        app:cardElevation="4dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/recipeTitleTwo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginStart="10dp"
+            android:text="Nutella Pie"
+            android:textAppearance="@style/TextAppearance.AppCompat.Headline"
+            android:textStyle="bold"
+            android:fontFamily="@font/playfair_display_black"
+            android:textColor="@color/colorPrimaryDark"
+            android:textIsSelectable="true" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="5dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginStart="8dp">
+        <TextView
+            android:id="@+id/recipeServingTwo"
+            android:layout_width="0dp"
+            android:layout_weight="0.5"
+            android:layout_height="wrap_content"
+            android:drawableLeft="@drawable/ic_local_dining_black_24dp"
+            android:drawableStart="@drawable/ic_local_dining_black_24dp"
+            android:drawableTint="@color/logo_color"
+            android:drawablePadding="3dp"
+            android:padding="5dp"
+            android:text="Servings"
+            android:textColor="@android:color/darker_gray"
+            android:textStyle="bold"
+            android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium" />
+
+            <TextView
+                android:id="@+id/recipeTimeTwo"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.5"
+                android:drawableLeft="@drawable/ic_timer"
+                android:drawableStart="@drawable/ic_timer"
+                android:drawableTint="@color/logo_color"
+                android:drawablePadding="3dp"
+                android:padding="5dp"
+                android:text="20 minutes"
+                android:textColor="@android:color/darker_gray"
+                android:textStyle="bold"
+                android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginLeft="@dimen/spacing_middle"
+            android:layout_marginRight="@dimen/spacing_middle"
+            android:background="@color/grey_10" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/ingredient_header"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Ingredients"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                    android:fontFamily="@font/playfair_display_black"
+                    android:textStyle="bold"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:textIsSelectable="true"
+                    android:layout_margin="10dp"
+                    tools:context=".ItemDetailFragment" />
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/ingredients_list"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    tools:listitem="@layout/ingredient_list_item" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/step_header"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Directions"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                    android:fontFamily="@font/playfair_display_black"
+                    android:textStyle="bold"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:textIsSelectable="true"
+                    android:layout_margin="10dp"
+                    tools:context=".ItemDetailFragment" />
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/steps_list"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    tools:listitem="@layout/step_list_item" />
+
+            </LinearLayout>
+
+    </LinearLayout>
+
+    </android.support.v7.widget.CardView>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/spacing_large" />
+
+    </LinearLayout>
+</android.support.v4.widget.NestedScrollView>

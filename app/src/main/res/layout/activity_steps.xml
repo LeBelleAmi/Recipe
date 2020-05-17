@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Controllers.StepsActivity">
+
+    <android.support.design.widget.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:theme="@style/AppTheme.AppBarOverlay">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar4"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="?attr/colorPrimary"
+            app:popupTheme="@style/AppTheme.PopupOverlay">
+
+        </android.support.v7.widget.Toolbar>
+
+    </android.support.design.widget.AppBarLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/mainLayoutConst"
+        android:layout_marginTop="?attr/actionBarSize">
+
+        <!--<FrameLayout
+            android:id="@+id/step_fragment_container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />-->
+
+        <include layout="@layout/step_fragment" />
+
+        <!--<LinearLayout
+            android:id="@+id/linear_layout"
+            android:layout_width="match_parent"
+            android:layout_height="64dp"
+            android:background="@color/colorGray"
+            android:elevation="4dp"
+            android:paddingBottom="8dp"
+            android:paddingEnd="16dp"
+            android:paddingStart="16dp"
+            android:paddingTop="8dp"
+            android:layout_alignParentBottom="true">
+
+            <Button
+                android:id="@+id/btn_prev"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:layout_marginEnd="8dp"
+                android:layout_marginRight="8dp"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:drawablePadding="24dp"
+                android:drawableStart="@drawable/ic_previous"
+                android:drawableLeft="@drawable/ic_previous"
+                android:text="@string/previous"
+                android:textAlignment="textStart"
+                android:layout_gravity="start"
+                android:textColor="@color/colorPrimaryDark" />
+
+            <TextView
+                android:id="@+id/tv_page"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_gravity="center"
+                android:textColor="@color/colorPrimaryDark"
+                tools:text="6/12" />
+
+            <Button
+                android:id="@+id/btn_next"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:layout_marginEnd="8dp"
+                android:layout_marginRight="8dp"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:drawableEnd="@drawable/ic_next"
+                android:drawableRight="@drawable/ic_next"
+                android:drawablePadding="24dp"
+                android:text="@string/next"
+                android:textAlignment="textEnd"
+                android:layout_gravity="end"
+                android:textColor="@color/colorPrimaryDark" />
+
+        </LinearLayout>
+-->
+    </RelativeLayout>
+
+</android.support.design.widget.CoordinatorLayout>
